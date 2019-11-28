@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,13 +11,21 @@
  *
  * @author treba
  */
+
 public class FirstPro 
 {
+    static double C,F,c,f ;
+    
     public static void main(String[] args)
     {
-    
-    System.out.println("hi Piter!");
-    System.out.println(args[0]);
-    System.out.println(args[1]);
+    Scanner sc = new Scanner(System.in);
+        System.out.println("Introduceti temperatura in Fahrenheit:");
+        F = sc.nextDouble();
+        C = (5*(F-32))/9;
+        System.out.println("Temperatura in Celsius: "+C+"C");
+        System.out.println("Introduceti temperatura in Celsius:");
+        C = sc.nextDouble();
+        F = (9*C+(32*5))/5;
+        System.out.println("Temperatura in Fahrenheit:"+F+"F");   
     }
 }
